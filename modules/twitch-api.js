@@ -33,7 +33,7 @@ export default {
 }
 
 function request(method, path, options = {}){
-    const url = options.url || rootUrl + path
+    const url = options.url || rootUrl + path    
 
     const opts = {
         method,

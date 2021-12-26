@@ -5,6 +5,8 @@ import cors from 'cors'
 import twitchMid from "./middleware/twitch.js"
 
 import emotesRoutes from './routes/emotes.js'
+import usersRoutes from './routes/users.js'
+import channelsRoutes from './routes/channels.js'
 
 const __dirname = path.resolve()
 
@@ -20,5 +22,7 @@ app.use(express.urlencoded({ extended: false }))
 
 // Routes
 app.use("/emotes", emotesRoutes)
+app.use('/users', usersRoutes)
+app.use('/channels', channelsRoutes)
 
 app.listen(PORT, () => console.log(`Server has been started on port ${PORT}...`))

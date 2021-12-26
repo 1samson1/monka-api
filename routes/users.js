@@ -2,8 +2,8 @@ import { Router } from "express";
 
 const router = Router()
 
-router.get('/twitch/global', function(req, res){
-    req.twitchApi.get('/chat/emotes/global')
+router.get('/search/', function(req, res){
+    req.twitchApi.get(`/users/${req._parsedUrl.search}`)
         .then(data => res.json(data))
 })
 
