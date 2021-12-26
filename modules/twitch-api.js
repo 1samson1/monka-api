@@ -2,10 +2,15 @@ import fetch from 'node-fetch'
 
 const rootUrl = "https://api.twitch.tv/helix"
 
-const clientId = process.env.CLIENT_ID
-const accessToken = process.env.ACCESS_TOKEN
+let clientId
+let accessToken
 
 export default {
+    setTokens(client,access){
+        clientId = client
+        accessToken = access
+    },
+
     get(path, options) {
         return request('GET', path, options);
     },
