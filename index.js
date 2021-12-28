@@ -1,3 +1,8 @@
+// ENV
+import dotenv from 'dotenv'
+dotenv.config()
+
+// IMPORTS
 import express from "express"
 import path, { dirname } from 'path'
 import cors from 'cors'
